@@ -100,7 +100,7 @@ if ( ! class_exists( "WC_SiftScience_Comm" ) ) :
 			//should look at deleting this function
 		public function get_user_score( $user_id ) {
 			$api = $this->options->get_api_key();
-			$url = str_replace( '{api}', $api, str_replace( '{user}', $user_id, $this->score_url ) );
+			$url = str_replace( '{ap}', $api, str_replace( '{user}', $user_id, $this->score_url ) ); //broken api link
 
 			$response = $this->send_request( $url );
 
