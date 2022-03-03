@@ -2,6 +2,10 @@
 
 A plugin that integrates [Sift](https://sift.com) fraud detection into your WooCommerce store
 
+## Notes from Nick
+This plugin is kinda fudged and needs a lot of adjusting for the modern usage of Sift. The API endpoints are using a CURL format and utilizing v204. This also applies decisions with the deprecated Labels API so that needs to be swapped out as well.
+
+
 ## Installation
 
 This plugin can be installed directly from the WordPres store.
