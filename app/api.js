@@ -25,11 +25,15 @@ const api = async (action, id) => {
 const getLabelValue = (value) => {
 	switch (value) {
 		case 'bad':
-			return 'set_bad'
+			return 'set_bad' // 'order_looks_bad_payment_abuse' Should I call the Decision ID here? Swapping out the Labels API...
 		case 'good':
-			return 'set_good'
+			return 'set_good' // 'order_looks_ok_payment_abuse'
 		default:
 			return 'unset'
+		/*Drafting cases for bad Users
+		case '
+		*/
+		
 	}
 }
 

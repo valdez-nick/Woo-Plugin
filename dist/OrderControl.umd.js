@@ -315,11 +315,18 @@ var api = /*#__PURE__*/function () {
 
 var getLabelValue = function getLabelValue(value) {
   switch (value) {
-    case 'bad':
-      return 'set_bad';
+    case 'bad': //case 'bad_order':
+      return 'set_bad'; // return 'set_bad_order';
 
-    case 'good':
-      return 'set_good';
+    case 'good': //case 'good_order':
+      return 'set_good'; //return 'set_good_order';
+
+      /* drafting for bad users
+    case 'bad_user':
+      return 'set_bad_user';
+
+    case 'good_user':
+      return 'set_good_user'; */
 
     default:
       return 'unset';

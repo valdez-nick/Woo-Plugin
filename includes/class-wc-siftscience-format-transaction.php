@@ -95,6 +95,10 @@ if ( ! class_exists( 'WC_SiftScience_Format_Transaction' ) ) :
 			'bacs' => array( '$payment_type' => '$electronic_fund_transfer' ),
 			'cheque' => array( '$payment_type' => '$check' ),
 			'paypal' => array( '$payment_type' => '$third_party_processor', '$' => '$paypal' ),
+			//'credit_card' => array( '$payment_type' => '$credit_card'),
+			//'credit_card' => array( '$payment_type' => '$debit_card'),
+			//'ach_payment' => array( '$payment_type' => '$ach_credit),
+			//'wire_payment' => array( '$payment_type' => '$wire_credit'),
 		);
 
 		public function get_payment_method( WC_Order $order ) {

@@ -62,7 +62,8 @@ if ( ! class_exists( "WC_SiftScience_Api" ) ) :
 			wp_die();
 		}
 
-		public function handleRequest( $action, $order_id ) {
+		public function han
+		dleRequest( $action, $order_id ) {
 			if ( ! is_super_admin() ) {
 				return array(
 					'status' => 401,
@@ -78,15 +79,15 @@ if ( ! class_exists( "WC_SiftScience_Api" ) ) :
 			if ( $order_id ) {
 				$user_id = $this->get_user_id( $order_id );
 			}
-
+               // need to adjust the switch statement below to reflect the Order & User level decisions
 			switch ( $action ) {
 				case 'score':
 					break;
-				case 'set_good':
-					$this->comm->post_label( $user_id, false );
+				case 'set_good': // case 'set_good_order' order_looks_ok_payment_abuse
+					$this->comm->post_label( $user_id, false ); //$this->comm->post_order_decision($user_id, looks_ok_payment_abuse)
 					break;
-				case 'set_bad':
-					$this->comm->post_label( $user_id, true );
+				case 'set_bad': //case 'set_bad_order'
+					$this->comm->post_label( $user_id, true ); //$this-comm->post_order_decision($user_id, looks_bad_payment_abuse)
 					break;
 				case 'unset':
 					$this->comm->delete_label( $user_id );
